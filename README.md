@@ -24,6 +24,8 @@ Construct a Rewards::Service (passing it a Eligibility::Service to work
 from), then tell it to discover the rewards for a given account number
 and subscription package.  
 
+To run the test suite use `bundle exec rake test`.
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/Rewards/fork )
