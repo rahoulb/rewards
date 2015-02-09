@@ -13,6 +13,13 @@ describe Rewards::Service do
   end
 
   describe "when the customer is not eligible for rewards" do
+    before do
+      eligibility_service.expects(:check_eligibility_for).with(account_number: account_number).returns(:ineligible)
+    end
+
+    it "returns no rewards to the caller" do
+      subject.rewards_for(account_number: account_number, subscriptions: subscriptions).must_equal []
+    end
 
   end
 
