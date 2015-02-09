@@ -27,6 +27,12 @@ describe Rewards::Service do
   end
 
   describe "when the customer account number is invalid" do
+    before do
+      eligibility_service.expects(:check_eligibility_for).with(account_number: account_number).raises(Rewards::InvalidAccountNumber)
+    end
 
+    it "returns no rewards to the caller, but does return an error code" do
+      -> { subject.rewards_for(account_number: account_number, subscriptions: subscriptions) }.must_raise(Rewards::InvalidAccountNumber)
+    end
   end
 end
