@@ -1,6 +1,6 @@
 # Rewards
 
-TODO: Write a gem description
+BSkyB Rewards Service
 
 ## Installation
 
@@ -20,12 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Construct a Rewards::Service (passing it a Eligibility::Service to work
+from), then tell it to discover the rewards for a given account number
+and subscription package.  
 
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/Rewards/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
+2. Create your feature branch (`git checkout -b my-new-feature`), with
+   full tests
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
