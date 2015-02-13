@@ -1,6 +1,4 @@
-# Rewards
 
-BSkyB Rewards Service
 
 ## Installation
 
